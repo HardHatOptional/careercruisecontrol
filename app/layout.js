@@ -8,7 +8,6 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         {children}
-        {/* Abacus.AI Chat Widget */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
