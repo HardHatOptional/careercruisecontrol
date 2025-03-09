@@ -37,7 +37,7 @@ export default function ChatWidget() {
         const widgetScript = document.createElement('script');
         widgetScript.type = 'text/javascript';
         widgetScript.async = true;
-        widgetScript.src = "https://abacus.ai/app-embed/chat-widget.js";
+	  widgetScript.src = "https://app.abacus.ai/app-embed/chat-widget.js";
         document.body.appendChild(widgetScript);
 
         return () => {
