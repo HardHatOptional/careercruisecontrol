@@ -1,51 +1,72 @@
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-white to-blue-50">
-      {/* Hero Section */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            Career Cruise Control
-          </h1>
-          <p className="text-xl text-gray-600 mb-12">
-            Navigate Your Career Journey with Confidence
-          </p>
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-800 to-blue-900">
+      {/* Video Welcome Section */}
+      <div className="relative h-[60vh] overflow-hidden">
+        <video 
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+          className="absolute w-full h-full object-cover opacity-70"
+        >
+          <source src="/media/welcome.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/90 to-transparent">
+          <div className="relative h-full flex items-center justify-center text-center">
+            <div className="px-4">
+              <h1 className="text-6xl font-bold text-white mb-6 tracking-wider">
+                Career Cruise Control
+              </h1>
+              <p className="text-2xl text-blue-200 mb-12">
+                Navigate Your Future
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
 
-        {/* Features Grid */}
+      {/* Main Content with Glassmorphism */}
+      <div className="max-w-6xl mx-auto px-4 -mt-20 relative z-10">
         <div className="grid md:grid-cols-2 gap-8 mb-16">
-          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+          {/* Feature Cards with Glassmorphism */}
+          <div className="backdrop-blur-lg bg-white/10 p-8 rounded-2xl shadow-xl border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <h2 className="text-2xl font-semibold text-blue-200 mb-4">
               Career Guidance
             </h2>
-            <p className="text-gray-600">
-              Get personalized career advice and navigate your professional journey with our AI-powered assistant.
+            <p className="text-blue-100">
+              Get personalized advice for your career path
             </p>
           </div>
           
-          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+          <div className="backdrop-blur-lg bg-white/10 p-8 rounded-2xl shadow-xl border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <h2 className="text-2xl font-semibold text-blue-200 mb-4">
               Skill Development
             </h2>
-            <p className="text-gray-600">
-              Identify and develop the skills you need to advance in your chosen career path.
+            <p className="text-blue-100">
+              Identify and develop key professional skills
             </p>
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center bg-white p-12 rounded-3xl shadow-lg">
-          <h2 className="text-3xl font-semibold text-gray-900 mb-4">
-            Ready to Take Control?
+        {/* Coming Soon Section */}
+        <div className="text-center backdrop-blur-lg bg-white/5 p-12 rounded-3xl shadow-xl border border-white/10 mb-20">
+          <h2 className="text-3xl font-semibold text-blue-200 mb-4">
+            AI Assistant Coming Soon
           </h2>
-          <p className="text-gray-600 text-lg mb-8">
-            Use our chat assistant to start your career journey today!
+          <p className="text-blue-100 text-lg mb-8">
+            Our advanced AI career guidance system is under development. Stay tuned!
           </p>
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-blue-700 transition-colors">
-            Get Started
+          <button className="bg-blue-500/80 hover:bg-blue-600/80 text-white px-8 py-3 rounded-lg text-lg font-medium backdrop-blur-sm transition-all duration-300 hover:scale-105">
+            Notify Me
           </button>
         </div>
       </div>
-    </main>
+
+      {/* Atmospheric Background Elements */}
+      <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(0,0,0,0))]"></div>
+      </div>
+    </div>
   );
 }
